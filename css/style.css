@@ -167,7 +167,7 @@ img {
     width: max-content;
 }
 
-/* Skills UPDATE */
+/* Skills*/
 .skills-title,
 .pricing-title {
     text-align: center;
@@ -633,4 +633,27 @@ img {
     .card-4 {
         flex-direction: column;
     }
+
+    .skills-card {
+        justify-content: space-between;
+    }
+
+    .skills-card__body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills-button {
+        margin-top: auto
+    }
+
+    .card-4 .skills-card__body {
+        padding: 0 28px 30px;
+    }
+
+    .skills-button {
+        font-size: 14px;
+    }
+
 }
