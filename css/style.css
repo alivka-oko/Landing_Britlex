@@ -127,8 +127,12 @@ img {
     font-weight: 400;
 }
 
-.burger__menu {
+.burger__menu,
+.contact__title.hide-575 {
     display: none;
+}
+
+.burger__menu {
     cursor: pointer;
 }
 
@@ -345,7 +349,7 @@ img {
 
 .contact {}
 
-.contact>.container {
+.contact__flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -694,5 +698,46 @@ img {
     .pricing-card__description {
         margin: 0 auto;
         margin-bottom: 30px;
+    }
+
+    /* Contact */
+    .contact__title {
+        display: none;
+    }
+
+    .contact__title.hide-575 {
+        display: block;
+    }
+
+    .contact {
+        text-align: center;
+    }
+
+    .contact__flex {
+        flex-direction: column;
+    }
+
+    .contact__left-side,
+    .contact__right-side {
+        width: 100%;
+    }
+
+    .contact__right-side {
+        max-width: 100%;
+    }
+
+    .contact__input {
+        gap: 0px;
+    }
+
+    .contact__input-subscribe {
+        border-radius: 10px;
+        width: 193px;
+        margin-left: -100px;
+    }
+    .contact__input-subscribe:hover {
+        background-color: var(--main-color);
+        color: var(--background-color);
+        border: 1px transparent solid;
     }
 }
