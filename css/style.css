@@ -1,6 +1,4 @@
-html {
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
     --main-color: #000;
@@ -9,10 +7,16 @@ html {
     --background-color: #F5F5F5;
 }
 
+html {
+    box-sizing: border-box;
+}
+
 *,
 *::after,
 *::before {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -27,11 +31,12 @@ img {
 .container {
     max-width: 1338px;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 .text-p {
-    color: var(--gray-color);
-    font-size: 24px;
+    color: var(--p-color);
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -61,6 +66,10 @@ img {
     padding: 17px 60px;
     border-radius: 5px;
     color: #FFF;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    border: 1px transparent solid;
+
 }
 
 .btn-light {
@@ -69,34 +78,384 @@ img {
     color: var(--main-color);
 }
 
+.btn-light:hover {
+    background: var(--dark-main-color);
+    color: var(--background-color);
+}
+
 .btn-dark {
     background: var(--dark-main-color);
 }
 
+.btn-dark:hover {
+    background: transparent;
+    color: var(--dark-main-color);
+    border: 1px var(--dark-main-color) solid;
+}
+
 /* Header */
+.header {
+    padding-top: 55px;
+}
+
 .header>.container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header__menu {
     display: flex;
     list-style: none;
-    gap: 10px;
+    gap: 30px;
+}
+
+.header__menu-link {
+    text-decoration: none;
+    color: var(--dark-main-color);
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.header__menu-link:hover {
+    opacity: 0.8;
+}
+
+.header-btn {
+    font-size: 24px;
+    font-weight: 400;
 }
 
 /* Home */
+
+.home {
+    padding: 150px 0;
+}
 
 .home>.container {
     display: flex;
     justify-content: space-between;
 }
 
+.home__text {
+    max-width: 40%;
+}
+
 .home-title {
-    max-width: 286px;
+    margin-bottom: 40px;
 }
 
 .home-description {
-    max-width: 632px;
+    margin-bottom: 60px;
+    font-size: 24px;
 }
 
+.home-btn {
+    font-size: 36px;
+    font-weight: 400;
+    border-radius: 15px;
+    padding: 32px 118px;
+}
+
+.home__img {
+    width: max-content;
+}
+
+/* Skills */
+.skills-title,
+.pricing-title {
+    text-align: center;
+}
+
+.skills-cards {
+    padding: 90px 0;
+    display: grid;
+    gap: 18px;
+    grid-template-areas:
+        "first second third"
+        "first fourth fourth";
+    justify-content: space-evenly;
+    align-items: stretch;
+    text-align: start;
+
+}
+
+.skills-card {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 435px;
+    justify-content: space-evenly;
+}
+
+.card-1 {
+    grid-area: first;
+}
+
+.card-2 {
+    grid-area: second;
+    align-items: end;
+}
+
+.card-3 {
+    grid-area: third;
+}
+
+.card-4 {
+    grid-area: fourth;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    max-width: none;
+}
+
+
+.skills-card__body {
+    padding: 0 28px 30px;
+}
+
+.card-4 .skills-card__body {
+    width: 40%;
+    padding: 40px 0 30px 30px;
+}
+
+.skills-card__description {
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.skills-button {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* about */
+.about {
+    padding: 200px 0;
+}
+
+.about>.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__left-side {
+    width: 50%;
+}
+
+.about__text {
+    margin-bottom: 30px;
+}
+
+.about-title {
+    margin-bottom: 10px;
+}
+
+.about__numbers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about__numbers-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__numbers-item-num {
+    color: var(--dark-main-color);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 80px;
+    /* 166.667% */
+}
+
+.about__numbers-item-name {}
+
+.about__image {}
+
+.pricing {
+    padding-bottom: 250px;
+}
+
+.pricing-title {
+    margin-bottom: 82px;
+}
+
+.pricing-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.pricing-card {
+    display: grid;
+    align-items: end;
+    grid-template-rows: 340px 80px;
+}
+
+.pricing-card__img {}
+
+.pricing-card__title {}
+
+.pricing-card__description {
+    margin-bottom: 25px;
+    height: 80%;
+}
+
+.pricing-card__tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 5px;
+    background: rgb(238, 238, 238);
+    padding: 0px 20px;
+    width: max-content;
+}
+
+.tag-price {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    color: var(--dark-main-color);
+}
+
+.tag-price::before {
+    content: '£';
+}
+
+.tag-duration {
+    color: rgb(84, 98, 105);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.contact {}
+
+.contact>.container {
+    display: flex;
+}
+
+.contact__left-side {}
+
+.contact__right-side {}
+
+.contact__title {
+    margin-bottom: 37px;
+}
+
+.contact__description {
+    margin-bottom: 50px;
+}
+
+.contact__input {
+    display: flex;
+    gap: 12px;
+}
+
+.contact__input-email {
+    padding: 26px 30px;
+    border: 1px solid var(--p-color);
+    border-radius: 10px;
+    max-width: 450px;
+    width: 450px;
+    font-size: 16px;
+    /* color: var(--p-color); */
+}
+
+
+.contact__input-subscribe {
+    font-size: 20px;
+}
+
+.footer {}
+
+.footer>.container {
+    padding: 31px;
+    border-top: 1px solid #C4C4C4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact {
+    padding-bottom: 200px;
+}
+
+.policies {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--p-color);
+}
+
+
+@media screen and (max-width:992px) {
+
+    .text-h1 {
+        font-size: 48px;
+    }
+
+    .text-h2 {
+        font-size: 36px;
+    }
+
+    .about__numbers-item-num {
+        font-size: 30px;
+    }
+
+    .text-h3 {
+        font-size: 22px;
+    }
+
+    .home-btn {
+        font-size: 24px;
+        padding: 22px 78px;
+    }
+
+    .text-p,
+    .header__menu-link {
+        font-size: 16px;
+    }
+
+    .text-p.skills-card__description {
+        font-size: 14px;
+    }
+
+    .header-btn,
+    .skills-card__description {
+        font-size: 18px;
+    }
+
+    .home {
+        padding: 80px 0;
+    }
+
+    .home__text {
+        max-width: 50%;
+    }
+
+    .card-4 .skills-card__body {
+        width: 90%;
+    }
+
+    .about__left-side {
+        width: 65%;
+    }
+
+    .about__numbers {
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    .pricing-title {
+        margin-bottom: 0;
+    }
+}
