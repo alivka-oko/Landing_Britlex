@@ -127,6 +127,11 @@ img {
     font-weight: 400;
 }
 
+.burger__menu {
+    display: none;
+    cursor: pointer;
+}
+
 /* Home */
 
 .home {
@@ -342,9 +347,13 @@ img {
 
 .contact>.container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.contact__left-side {}
+.contact__left-side {
+    width: 35%;
+}
 
 .contact__right-side {}
 
@@ -368,12 +377,14 @@ img {
     max-width: 450px;
     width: 450px;
     font-size: 16px;
+    max-width: 100%;
     /* color: var(--p-color); */
 }
 
 
 .contact__input-subscribe {
     font-size: 20px;
+    max-width: 100%;
 }
 
 .footer {}
@@ -396,6 +407,9 @@ img {
     color: var(--p-color);
 }
 
+.contact__right-side {
+    max-width: 60%;
+}
 
 @media screen and (max-width:992px) {
 
@@ -407,17 +421,16 @@ img {
         font-size: 36px;
     }
 
-    .about__numbers-item-num {
-        font-size: 30px;
-    }
-
     .text-h3 {
         font-size: 22px;
+        line-height: normal;
+        margin-bottom: 10px;
     }
 
     .home-btn {
         font-size: 24px;
         padding: 22px 78px;
+        border-radius: 5px;
     }
 
     .text-p,
@@ -432,6 +445,10 @@ img {
     .header-btn,
     .skills-card__description {
         font-size: 18px;
+    }
+
+    .about__numbers-item-num {
+        font-size: 30px;
     }
 
     .home {
@@ -457,5 +474,123 @@ img {
 
     .pricing-title {
         margin-bottom: 0;
+    }
+
+    .tag-price {
+        font-size: 24px;
+    }
+
+    .pricing-card {
+        grid-template-rows: 240px 80px;
+    }
+
+    .contact__input-subscribe,
+    .policies {
+        font-size: 16px;
+    }
+
+    .contact__input-email {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .text-h1 {
+        font-size: 36px;
+        line-height: 45px;
+    }
+
+    .text-h2 {
+        font-size: 30px;
+    }
+
+    .text-h3 {
+        font-size: 20px;
+    }
+
+    .burger__menu {
+        display: block;
+    }
+
+    .text-p {
+        font-size: 14px;
+    }
+
+    .tag-duration {
+        font-size: 16px;
+    }
+
+    ;
+
+    .home-btn {
+        font-size: 18px;
+        padding: 22px 78px;
+    }
+
+    .header__menu,
+    .header-btn {
+        display: none;
+    }
+
+    .home__text {
+        max-width: 49%;
+    }
+
+    .skills-button {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 13px 35px;
+    }
+
+    .about {
+        padding: 0px 0 80px 0;
+    }
+
+    .skills-cards,
+    .home {
+        padding: 60px 0;
+    }
+
+    .about__left-side {
+        width: 80%;
+    }
+
+    .text-h2 {
+        line-height: 50px;
+    }
+
+    .tag-price {
+        font-size: 22px;
+    }
+
+    .pricing-card {
+        grid-template-rows: 210px 80px;
+    }
+
+    .contact__input-subscribe,
+    .policies {
+        font-size: 13px;
+    }
+
+    .contact__input-email {
+        font-size: 12px;
+    }
+
+    .contact__input {
+        gap: 6px;
+    }
+
+    .pricing-block {
+        gap: 30px;
+    }
+
+    .pricing {
+        padding-bottom: 65px;
+    }
+
+    .contact {
+        padding-bottom: 130px;
     }
 }
