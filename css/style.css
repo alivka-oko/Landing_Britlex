@@ -825,21 +825,54 @@ img {
         padding-bottom: 60px;
     }
 
+
+    .contact__input-subscribe {
+        font-size: 14px;
+    }
+
+}
+
+/* Дополнительные изменения */
+@media screen and (max-width:525px) {
+    .pricing-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pricing-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:701px) {
+    .pricing-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pricing-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .footer__logo {
+        margin-bottom: 15px;
+    }
+
     .footer>.container {
         flex-direction: column;
         padding: 15px;
         align-items: center;
     }
 
-    .contact__input-subscribe {
-        font-size: 14px;
-    }
-
     .policies {
         font-size: 10px;
-    }
-
-    .footer__logo {
-        margin-bottom: 15px;
     }
 }
