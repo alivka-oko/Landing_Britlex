@@ -9,23 +9,23 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
+    <header class="header" id="header">
+        <nav class="container">
             <img src="img/britlex.svg" alt="logo" class="logo">
             <ul class="header__menu">
-                <li class="header__menu-item"><a href="#" class="header__menu-link">Home</a></li>
-                <li class="header__menu-item"><a href="#" class="header__menu-link">Skills</a></li>
-                <li class="header__menu-item"><a href="#" class="header__menu-link">About Us</a></li>
-                <li class="header__menu-item"><a href="#" class="header__menu-link">Pricing</a></li>
-                <li class="header__menu-item"><a href="#" class="header__menu-link">Contacts</a></li>
+                <li class="header__menu-item"><a href="#home" class="header__menu-link">Home</a></li>
+                <li class="header__menu-item"><a href="#skills" class="header__menu-link">Skills</a></li>
+                <li class="header__menu-item"><a href="#about" class="header__menu-link">About Us</a></li>
+                <li class="header__menu-item"><a href="#pricing" class="header__menu-link">Pricing</a></li>
+                <li class="header__menu-item"><a href="#contact" class="header__menu-link">Contacts</a></li>
             </ul>
             <button class="btn btn-light header-btn">Let's Talk</button>
             <div class="burger__menu">
                 <img src="img/burger-menu.svg" alt="menu">
             </div>
-        </div>
+        </nav>
     </header>
-    <section class="home">
+    <section class="home" id="home">
         <div class="container">
             <div class="home__text">
                 <h1 class="text-h1 home-title">Learn <br> Any Foreign Language</h1>
@@ -39,7 +39,7 @@
             </div>
         </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="container">
             <h2 class="text-h2 skills-title">Skills</h2>
             <div class="skills-cards">
@@ -103,7 +103,7 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <h2 class="text-h2 about-title">About Us</h2>
             <div class="about__flex">
@@ -140,7 +140,7 @@
             </div>
         </div>
     </section>
-    <section class="pricing">
+    <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="text-h2 pricing-title">Pricing</h2>
             <div class="pricing-block">
@@ -178,7 +178,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <h2 class="text-h2 contact__title hide-575">Contact Us</h2>
             <div class="contact__flex">
@@ -197,12 +197,15 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container">
             <img class="footer__logo" src="img/britlex.svg" alt="logo">
             <div class="policies">Terms and Conditions • Privacy Policy • Cookie Policy</div>
         </div>
     </footer>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
