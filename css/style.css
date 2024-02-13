@@ -241,7 +241,7 @@ img {
     padding: 200px 0;
 }
 
-.about>.container {
+.about__flex {
     display: flex;
     justify-content: space-between;
 }
@@ -656,4 +656,17 @@ img {
         font-size: 14px;
     }
 
+    /* About */
+    .about__flex {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .about {
+        text-align: center;
+    }
+
+    .about__numbers {
+        justify-content: space-around;
+    }
 }
